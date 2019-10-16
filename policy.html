@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
+</head> 
+<body>
+
+	<div id="container" style="width:1100px;margin:0 auto">
+		<div id="header" style="background-color:#ffffff;">
+			<img src="logo1.jpg" width="200" height="150" id="logo"/>
+			<h1 id="title">Health  Insurance  System</h1>
+				<div id="welcome">
+	<p>&nbsp;&nbsp;Welcome
+	<br/>"Mr.User"
+	</p>
+	
+	
+	</div>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<div id="top-menu">
+			<ul>
+ 
+			
+     				<li> <a href="userpage.html">Home</a> </li>
+ 
+     				<li> <a class="active"href="policy.html">Policies</a> </li>
+      
+     				<li> <a href="claim.html">Claims</a> </li>
+    
+     				<li> <a href="aboutus.html">AboutUs</a> </li>
+   
+     				<li> <a href="user.html"><u>Log Out</u></a> </li>
+     
+     				
+			</ul>
+			</div>
+		<hr>
+		<br/>
+		<div style="float:left;">
+		<img src="adminpic.jpg" width="250" height="350" id="adminpic"/>
+		<ul>
+		<li> <a class="active" href="policy.html">Register</a> </li>
+		</ul>
+		<br/>
+		<br/>
+		<ul>
+		<li> <a href="Renew.html">Renew</a> </li>
+		</ul>
+		</div>
+		
+		<div id="mid1right" style="background-color:#ffffff;width:800px;float:right;">
+<center><img src="userreg.png" width="270" height="90" id="userreg"/></center>
+<center>
+<div  class="form3">
+    		<form name="form3" id="form3" action="claim.html" method="post" >
+			<table border="0">
+			<tr>
+			<td> 
+                 Insurance Name:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                   <option value="">None</option>
+                  <option  value="PHC">Physical condition</option>
+                  <option value="ACC">Accident related </option>
+                  <option value="OCC" >Occupational related</option>
+                  <option value="ERC">Environment related</option>
+                  <option value="LSC">Life style related</option>
+                  <option value="TRC">Travel related</option>
+              
+                 </select>    
+			  </td>
+			  </tr>
+			<tr>
+			<td> 
+                 Policy Amount:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                   <option value="">None</option>
+                  <option  value="3">300000</option>
+                  <option value="5">500000 </option>
+                  <option value="2" >200000</option>
+                  <option value="4">400000</option>
+              
+                 </select>    
+			  </td>
+			  </tr>
+			<tr>
+			<td> 
+                 Policy Duration:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                   <option value="">None</option>
+                  <option  value="10">10</option>
+                  <option value="15">15 </option>
+                  <option value="20" >20</option>
+                  <option value="25">25</option>
+              
+                 </select>    
+			  </td>
+			  </tr>
+			<tr>
+			<td> 
+                 Premium Type:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                   <option value="">None</option>
+                  <option  value="Y">Yearly</option>
+                  <option value="HY">Half Yearly </option>
+                  <option value="Q" >Quarterly</option>
+              
+                 </select>    
+			  </td>
+			  </tr>
+			  <tr>
+			<td> 
+                 <label for="startDate">Start date:</label>
+			</td>
+			<td>
+               <input id="startDate" name="startDate" type="date" min="2015-09-25">   
+			  </td>
+			  </tr>
+			
+			  <tr>
+			  <td>Discount:</td>
+			  <td><input id="discount" name="discount" placeholder="Discount" type="text" ></td>
+			  </tr>
+			  <tr>
+			  <td>Premium Amount</td>
+			  <td><input id="premium" name="premium" placeholder="Premium Amount"  type="text" > </td>
+			 </tr>
+			 <tr>
+			<td>Maturity Date:</td> 
+            <td><input id="maturity" name="maturity" placeholder="Maturity Date" type="text" >
+		</td>
+			</tr>
+            <br>
+			<tr>
+			<td>
+			</td>
+			<td>
+			<br/>
+            <input class="button" name="submit" id="submit" value="Register" type="submit" > 
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input  class="button" name="reset" id="reset" value="Reset" type="reset"> 	 
+			</td>
+			</tr>
+			</table>
+   </form> 
+  </div>
+</center>  
+
+</div>
+
+
+	
+		<div id="footer" style="background-color:white;clear:both;text-align:center;">
+		
+<br/>
+<br/>
+<hr>
+			Copyright © SPAS&ME@1 Collabaration Limited
+		 </div>
+  </div>                                                              

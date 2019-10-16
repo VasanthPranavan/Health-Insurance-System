@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script type="text/javascript">
+ var maxAge = 90;
+var today = new Date()
+      //Calculates age from given Birth Date in the form//
+       function _calcAge(birthDate, givenDate) {
+        givenDate = new Date(today);
+        var dt1 = document.getElementById('date1').value;
+        var birthDate = new Date(dt1);
+        var years = (givenDate.getFullYear() - birthDate.getFullYear());
+
+        if (givenDate.getMonth() < birthDate.getMonth() ||
+     givenDate.getMonth() == birthDate.getMonth() && givenDate.getDate() < birthDate.getDate()) {
+            years--;
+        }
+
+        return years;
+    }
+	
+	 function _setAge() {
+
+        var age = _calcAge();
+        if (age > maxAge) {
+            document.getElementById("dateError").innerHTML = "Age should be <90 years";
+document.getElementById("date1").focus();
+return false;
+        } else
+ document.getElementById("dateError").innerHTML = "";
+
+    }
+
+function validate1(a)
+        {
+		var pattern1=/[^a-z|^A-Z|^\s]/;
+            if(a.value.match(pattern1))
+            {
+               document.getElementById("usernameError").innerHTML = "Should contain only alphabets and space";
+                a.focus();
+				return false;
+            }
+			else
+			{
+			 document.getElementById("usernameError").innerHTML = "";
+			}
+        }
+		
+function validate2(b)
+        {
+		var pattern2=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$/;
+            if(!b.value.match(pattern2))
+            {
+               document.getElementById("passwordError").innerHTML = "Atleast 1lowercase,1uppercase & 1digit is required";
+                b.focus();
+				return false;
+            }
+			else
+			{
+			 document.getElementById("passwordError").innerHTML = "";
+			}
+        }
+		function validate22(repassword)
+		{
+		if (document.getElementById("password").value != repassword.value) 
+		{ 
+				document.getElementById("repasswordError").innerHTML = "Password does not Match.!!!";
+				repassword.focus();
+				return false; 
+		}
+		else
+			{
+			 document.getElementById("repasswordError").innerHTML = "";
+			}
+		}
+	
+		function validate3(c)
+        {
+		var pattern3=/^\d{6}$/;
+            if(!c.value.match(pattern3))
+            {
+               document.getElementById("pincodeError").innerHTML = "Pin code should be 6 digits";
+                c.focus();
+				return false;
+            }
+			else
+			{
+			 document.getElementById("pincodeError").innerHTML = "";
+			}
+        }
+	function validate4(d)
+        {
+		var pattern4=/^\d{10}$/;
+            if(!d.value.match(pattern4))
+            {
+               document.getElementById("phoneError").innerHTML = "Contact no should be 10 digits";
+                d.focus();
+				return false;
+            }
+			else
+			{
+			 document.getElementById("phoneError").innerHTML = "";
+			}
+        }
+</script>
+</head> 
+<body>
+
+	<div id="container" style="width:1100px;margin:0 auto">
+
+		<div id="header" style="background-color:#ffffff;">
+			<img src="logo1.jpg" width="200" height="150" id="logo"/>
+			<h1 id="title">Health  Insurance  System</h1>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<div id="top-menu">
+			<ul>
+ 
+			
+     				<li> <a href="home.html">Home</a> </li>
+ 
+     				<li> <a href="admin.html">Admin</a> </li>
+      
+     				<li> <a class="active" href="user.html">User</a> </li>
+    
+     				<li> <a href="aboutus.html">AboutUs</a> </li>
+   
+     				<li> <a href="contactus.html">ContactUS</a> </li>
+     
+     				
+			</ul>
+			</div>
+		<hr>
+		<br/>
+		
+		<div id="mid1left" style="background-color:#ffffff; margin-left:0px;height:300px;width:500px;float:left;">
+		<center>
+			<center><img src="userlog2.gif" width="220" height="120" id="userlog"/></center>
+			<form name="form1" id="f1" action="userpage.html" method="post" onsubmit="return validate1()">
+			<table border="0">
+			<tr>
+  			<td>Customer ID:</td>
+			<td><input type="text" name="customerid" id="customerid" required="" ></td>
+			</tr>
+			<tr>
+ 			<td><br/>Password:</td>
+			<td><br/><input type="password" name="password1" id="password1" required=""></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="forgot.html"><span style="color:red">*</span>Forgotten your password?</a> </td>
+			</tr>
+			<tr>
+			<td>
+			</td>
+			<td><input type="submit" name="submit" value="&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;" class="button" /> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" name="reset" value="&nbsp;&nbsp;Reset&nbsp;&nbsp;" class="button" /></td>
+			</tr>
+			</table>
+			</form>
+		</center>
+		<br/>
+<h3><center>Benefits of Having Health Insurance</center></h3>
+<font color="purple" size=5px;>
+<marquee behavior="scroll" WIDTH="100%" HEIGHT="80%"direction="up">
+<ul>
+<li><br/>*Health Insurance Company Of The Year 2015-Indian Insurance Awards 2015</li>
+<li><br/>*Largest Network hospitals base of over 7000+ hospitals</li>
+<li><br/>*Direct Claim Settlement without intervention of TPA</li>
+<li><br/>*90% of all Cashless claim approval done within 1 hour</li>
+<li><br/>*Awarded As The 'Claims - Service Company Of The Year, 2014'</li>
+<li><br/>*Pan India presence with more than 290+ Branch offices</li>
+</ul>
+</marquee>
+</font>
+</div>
+    <div id="mid1right" style="background-color:#ffffff;width:600px;float:right;">
+<center><img src="userreg.png" width="270" height="90" id="userreg"/></center>
+<center>
+<div  class="form2">
+    		<form name="form2" id="form2" action="aboutus.html" method="post">
+			<table border="0">
+			<tr>
+    		<td>Name:</td>
+    		<td><input id="name" name="name" placeholder="First and last name" type="text" required="" onblur="validate1(this)"> 
+			<br/><span style="color:red" id="usernameError"></span></td>
+			</tr>
+			<tr>
+			<td>Password:</td> 
+    		<td><input type="password" id="password" name="password" required="" onblur="validate2(this)"> 
+			<br/><span style="color:red" id="passwordError"></span></td>
+			</tr>
+			<tr>
+			<td>Retype Password:</td> 
+    		<td><input type="password" id="repassword" name="repassword" required="" onblur="validate22(this)"> 
+			<br/><span style="color:red" id="repasswordError"></span></td>
+			</tr>
+			<tr>
+			<td> 
+                 Country:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                   <option value="">None</option>
+                  <option  value="AUS">Australia</option>
+                  <option value="IND">India</option>
+                  <option value="SA" >South Africa</option>
+                  <option value="PAK">Pakistan</option>
+                  <option value="ENG">England</option>
+                  <option value="NZ">NewzLand</option>
+                  <option value="SL">Srilanka</option>
+                  <option value="WI">West Indies</option>
+                 </select>    
+			  </td>
+			  </tr>
+			  <tr>
+			<td> 
+                 State:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                  <option value="">None</option>
+                  <option  value="AP">Andhra Pradesh</option>
+                  <option value="C">California</option>
+                  <option value="T" >Telangana</option>
+                  <option value="TN">Tamil Nadu</option>
+                  <option value="MP">Madya Pradesh</option>
+                  <option value="D">Delhi</option>
+                  <option value="UP">Uttar Pradesh</option>
+                  <option value="M">Meghalaya</option>
+                 </select>    
+			  </td>
+			  </tr>
+			  <tr>
+			<td> 
+                 City:
+			</td>
+			<td>
+                  <select style="height:150%;width:100%;" required>
+                  <option value="">None</option>
+                  <option  value="Vij">Vijayawada</option>
+                  <option value="Chn">Chennai</option>
+                  <option value="Cal" >California</option>
+                  <option value="Gun">Guntur</option>
+                  <option value="Raj">Rajamundry</option>
+                  <option value="Eg">East Godavari</option>
+                  <option value="Wg">West Godavari</option>
+                  <option value="Siri">Siruseri</option>
+                 </select>    
+             
+			  </td>
+			  </tr>
+	<tr>
+    		<td>Address:</td>
+			<td>
+    		<textarea id="address" name="address" rows="3" cols="26" onblur="validate5(this)">
+Address</textarea>
+			<br/><span style="color:red" id="addressError"></span></td>
+			</tr>
+			  
+			  <tr>
+			  <td>Pincode:</td>
+			  <td><input id="pincode" name="pincode" placeholder="Pincode" required="" type="text" onblur="validate3(this)">	<br/><span style="color:red" id="pincodeError"></span></td>
+			  </tr>
+			  <tr>
+			  <td>Email</td>
+			  <td><input id="email" name="email" placeholder="example@domain.com"  type="email" required> </td>
+			  </tr>
+			  <tr>
+			  <td>Gender:</td>
+			  <td>
+			  <select style="height:150%;width:100%;" required>
+			 <option value="">None</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Other</option>
+            </select>
+			</td>
+			<tr>
+			<td>Mobile Number</td> 
+            <td><input id="phone" name="phone" placeholder="Phone Number" required="" type="text" onblur="validate4(this)">
+			<br/><span style="color:red" id="phoneError"></span></td>
+			</tr>
+            <tr>
+			<td>Date Of Birth:</td>
+			<td><input style="height:100%;width:100%;" type="date" id="date1" name="date1" required="" 
+			placeholder="Select Date" pattern="\d{4}-\d{2}-\d{2}" title="YYYY-MM-DD" onblur="_setAge()"/>
+			<span style="color:red" id="dateError"></span></td>
+			</td>
+			</tr>
+				<tr>
+			  <td>Customer Type:</td>
+			  <td>
+			  <select style="height:150%;width:100%;" required>
+			 <option value="">None</option>
+            <option value="normal">Normal</option>
+            <option value="paitent">Paitent</option>
+            </select>
+			</td>
+			<tr>
+            
+            <br>
+			<tr>
+			<td>
+			</td>
+			<td>
+			<br/>
+            <input class="button" name="submit" id="submit" value="Sign me up!" type="submit" > 
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input  class="button" name="reset" id="reset" value="Reset" type="reset"> 	 
+			</td>
+			</tr>
+			</table>
+   </form> 
+  </div>
+</center>  
+
+</div>
+
+           
+		<div id="footer" style="background-color:white;clear:both;text-align:center;">
+		
+<br/>
+<br/>
+<hr>
+			Copyright © SPAS&ME@1 Collabaration Limited
+		 </div>
+  </div>                                                              

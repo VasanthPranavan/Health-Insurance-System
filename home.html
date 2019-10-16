@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script>
+	  var bannerEle = {};
+	  var index = 0;
+	  var images = ['h2.jpg',
+		'h3.jpg','h4.jpg',
+		'h5.jpg','h6.jpg'
+	  ];
+	  var imageCycler = function(){
+		index = (index >= images.length - 1) ? 0 : index+=1;
+		bannerEle.src = images[index];
+	  };
+	  
+	  window.onload = function(){
+		bannerEle = document.getElementById("banner");
+		setInterval(imageCycler, 2000);
+	  };
+	</script>
+</head> 
+<body>
+
+	<div id="container" style="width:1100px;margin:0 auto">
+
+		<div id="header" style="background-color:#ffffff;">
+			<img src="logo1.jpg" width="200" height="150" id="logo"/>
+			<h1 id="title">Health  Insurance  System</h1>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<div id="top-menu">
+			<ul>
+ 
+			
+     				<li> <a class="active" href="home.html">Home</a> </li>
+ 
+     				<li> <a href="admin.html">Admin</a> </li>
+      
+     				<li> <a href="user.html">User</a> </li>
+    
+     				<li> <a href="aboutus.html">AboutUs</a> </li>
+   
+     				<li> <a href="contactus">ContactUS</a> </li>
+     
+     				
+			</ul>
+			</div>
+		<hr>
+		<br/>
+		<div>		
+<img id="banner" src="h1.png" height="300px" width="1100px" alt="banner"/>
+</div>
+
+           
+		<div id="footer" style="background-color:white;clear:both;text-align:center;">
+		
+<br/>
+<br/>
+<hr>
+			Copyright © SPAS&ME@1 Collabaration Limited
+		 </div>
+  </div>                                                              
